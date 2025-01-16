@@ -14,6 +14,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: Debug DOCKER_USER
+      run: echo "Docker user: ${{secrets.DOCKER_USER}}"
     - name: docker login
       env:
         DOCKER_USER: ${{secrets.DOCKER_USER}}
