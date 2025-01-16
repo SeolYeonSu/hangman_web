@@ -14,11 +14,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Debug DOCKER_USER
-      env:
-        ACTIONS_ALLOW_UNSECURE_COMMANDS: "true"
-        DOCKER_USER: ${{secrets.DOCKER_USER}}
-      run: echo "Docker user:$DOCKER_USER"
     - name: docker login
       env:
         DOCKER_USER: ${{secrets.DOCKER_USER}}
